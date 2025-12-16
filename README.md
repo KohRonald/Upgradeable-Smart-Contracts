@@ -62,6 +62,9 @@
   //The value is set in contract A
   ```
   - Does contract B logic in contract A
+  - All storage variables are stored in the proxy contract and not the implementation contract
+    - There is no need to move storage variables when upgrading the implementation contract
+    - On adding new storage variables in implementation contracts, the proxy will pick those variables up and store them on the proxy contract
 - This means that 1 Proxy address that has the same address forever, will point and route people to the correct implementation contract that has the logic
 - When an upgrade is needed, the new implementation contract is deployed, and the proxy will then point towards that new implemented contract
 - The proxy contract would have an admin only function to update the pointer to the latest/newest implemented contract
@@ -72,10 +75,6 @@
     implementation = newImplementation;
   }
   ```
-  - All storage variables are stored in the proxy contract and not the implementation contract
-    - There is no need to move storage variables when upgrading the implementation contract
-    - On adding new storage variables in implementation contracts, the proxy will pick those variables up and store them on the proxy contract
-
   #### Proxy Terminology
   1. The implementation Contract
      - Which has all the code of the protocol
