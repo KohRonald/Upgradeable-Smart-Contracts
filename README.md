@@ -100,7 +100,7 @@
    - Admin functions are functions that govern the upgrades
    - Users can only call functions in the implementation contract
    - Prevents function selector clashing
-2. Universal Upgradeable Proxies
+2. Universal Upgradeable Proxies (UUPS)
    - Put all the logic of upgrading in the implementation contract
    - AdminOnly upgrade functions are in the implementation contracts instead of the proxy
    - Saves Gas, no need to check in the proxy contract if someone is an admin or not
@@ -111,3 +111,10 @@
    - If a contract is too big to be implemented in a single contract, and requires multiple implementation, this pattern will be able to read multiple contracts
    - Allows for more granular upgrades (smaller upgrades)
      - Upgrade a singular contract out of all the multiple implemented contracts
+
+
+## EIP-1967 (Standard Proxy Storage Slots)
+- To have certain storage slots specifically used for proxies 
+
+## Reference
+* [Cyfrin Updraft Foundry UUPS Upgradeable Contracts](https://github.com/Cyfrin/foundry-upgrades-cu)*
