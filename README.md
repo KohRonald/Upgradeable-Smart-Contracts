@@ -117,4 +117,4 @@
 - To have certain storage slots specifically used for proxies 
 
 ## Reference
-* [Cyfrin Updraft Foundry UUPS Upgradeable Contracts](https://github.com/Cyfrin/foundry-upgrades-cu)*
+* [Cyfrin Updraft Foundry UUPS Upgradeable Contracts](https://github.com/Cyfrin/foundry-upgrades-cu)
