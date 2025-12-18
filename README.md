@@ -106,6 +106,7 @@
    - Saves Gas, no need to check in the proxy contract if someone is an admin or not
    - Proxy contracts will be smaller
    - However, if deploying an implementation contract without any upgradeable functionality, then there is nothing you can do.
+   - UUPS Proxies is handled by the implementation and which can be removed in the future, allowing for true immutablity down the line
 3. Diamond Pattern
    - Allows for multiple implementation contract
    - If a contract is too big to be implemented in a single contract, and requires multiple implementation, this pattern will be able to read multiple contracts
