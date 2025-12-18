@@ -12,7 +12,7 @@ import {OwnableUpgradeable} from "@openzeppelin-contracts-upgradeable/contracts/
  * @dev Implementation contract can never have a constructor, all initializing of storage variable can only be done in the proxy contract as storage is stored in the proxy, not the implementation
  * @dev Deploy implementation, call initializer function from openzepplin Initializable.sol, which will be called from the proxy contract
  */
-contract BoxV1 is Initializable, UUPSUpgradeable, OwnableUpgradeable {
+contract BoxV1 is Initializable, OwnableUpgradeable, UUPSUpgradeable {
     uint256 internal number;
 
     /// @custom:oz-upgrades-unsafe-allow constructor
